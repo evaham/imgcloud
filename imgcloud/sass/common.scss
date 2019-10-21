@@ -1,4 +1,4 @@
-﻿/* 이미지클라우드 var. 0.2.6 */
+﻿/* 이미지클라우드 var. 0.1.1 */
 //ie8기준처리
 //opencolor색상
 @import "oen-color.scss";
@@ -61,25 +61,33 @@ $ico_url:url(../img/img_icon_v1.png?132334);
 }
 table .tf__comm{ margin-top:-3px; margin-bottom:-2px;}
 
+
+
+
+
+
 $innershadow:inset 0 1px 2px 0 hsla(0,0%,0%, 0.08);
 $outershadow:0 1px 2px 0 hsla(0,0%,0%,0.2);
 $pagewidth:690px;
+
+
+
+
 
 .wrap{min-width:$pagewidth;
     &--popup{min-width:100%;}
 }
 .topbar{
-    &__comm{display:block; position:fixed; top:0; left:0; right:0; min-width:$pagewidth; height:35px; padding-top:5px; border-bottom:2px solid $oc-blue-8; background:$oc-blue-6; z-index:10;}
+    &__comm{display:block; position:fixed; top:0; left:0; right:0; min-width:$pagewidth; height:35px; padding-top:5px; border-bottom:1px solid $oc-blue-8; background:$oc-blue-6; z-index:10;}
     &__logo{display:inline-block;width:169px; height:34px; margin-top:-5px;}
-    &__menulist{ display:inline-block; overflow:hidden; margin:0; margin-left:30px; vertical-align:top;
+    &__menulist{ display:inline-block; margin-top:3px; margin-left:30px; vertical-align:top;
         &:after{content:''; display:block; clear:both}
-        > li{float:left; margin-left:4px;
-            > a{ display:block; height:30px; padding:7px 15px; border:1px solid $oc-blue-8; border-bottom:2px solid $oc-blue-8; font-weight:600; background:$oc-blue-7; color:$oc-blue-1; text-decoration:none; line-height:1; letter-spacing:-1px; cursor:pointer;
-                &:hover{ background: $oc-blue-5;}
+        > li{float:left; margin:0 5px;
+            > a{ display:block; padding:5px 2px; font-size:13px; font-weight:600; color:$oc-blue-2; text-decoration:none; line-height:1; letter-spacing:-1px; cursor:pointer; }
+            &.active{ border-bottom:2px solid $oc-gray-0;
+                > a{  color:$oc-white;}
             }
-            &.active > a{ border-color:$oc-blue-0; background:$oc-blue-0; color:$oc-blue-9;}
         }
-
     }
     &__tit{display:inline-block; padding:5px 10px; font-weight:600; color:$oc-white; letter-spacing:-1px; vertical-align:top}
     &__link{}
@@ -99,6 +107,11 @@ $pagewidth:690px;
         > tbody > tr > th {padding:3px; font-size:12px; font-weight:normal; color:$oc-gray-6}
         > tbody > tr > td {padding:3px; font-size:12px; }
     }
+}
+
+
+.tabmenu__list > li.active{border-bottom:5px solid $oc-blue-6;
+    .tabmenu__link{font-weight:600;}
 }
 
 .search{
@@ -121,21 +134,6 @@ $pagewidth:690px;
     }
 }
 
-.searchtab{
-    &__comm{position:relative; padding:6px 10px; border-bottom:1px solid $oc-gray-4;}
-    &__list{display:block;
-        &:after{content:''; display:block; clear:both}
-        > li {float:left; width:25%; padding-left:5px;
-            &:first-child {padding-left:0;}
-        }
-    }
-    &__btn{display:block; width:100%; padding: 8px; border:1px solid $oc-blue-3; font-weight:600; background:$oc-white; text-align:center; color:$oc-blue-7; cursor:pointer;
-        &:hover{border-color:$oc-blue-7; background:$oc-blue-7; color:$oc-white; text-decoration:none}
-    }
-}
-.searchtab__list >li.active .searchtab__btn{border-color:$oc-blue-7; background:$oc-blue-7; color:$oc-white; }
-
-
 $thumbsize:115px;
 .thumb{
     &__comm{padding-top:10px; min-height:600px; background:$oc-gray-0}
@@ -145,15 +143,13 @@ $thumbsize:115px;
     }
     &__list{display:block; margin-left:10px;
         &:after{content:''; display:block; clear:both}
-        > li{display:block; position:relative; overflow:hidden; float:left; height:165px; margin-right:6px; margin-bottom:6px; padding:6px; border:1px solid $oc-gray-3; border-radius:3px; background:$oc-white;}
+        > li{display:block; position:relative; overflow:hidden; float:left; margin-right:6px; margin-bottom:6px; padding:6px; border:1px solid $oc-gray-3; border-radius:3px; background:$oc-white;}
     }
-    &__imgbox{position:relative; width:$thumbsize; height:$thumbsize;}
-    &__img {position:absolute; top:0; right:0; bottom:0; left:0; max-width:100%; max-height:100%; width:auto; height:auto; margin: auto;}
-    &__martimgbox{position:relative; width:149px; height:149px;}
-    &__martimg {position:absolute; top:0; right:0; bottom:0; left:0; max-width:100%; max-height:100%; width:auto; height:auto; margin: auto;}
+    &__img {display:block; max-width:$thumbsize; max-height:$thumbsize;}
+    &__martimg {display:block; max-width:149px; max-height:149px;}
     &__martbtn {display:block; max-width:149px; max-height:149px; background:url(../img/)}
     &__txt {overflow:hidden; width:$thumbsize; margin-top:4px; font-size:12px; text-align:center; text-overflow:ellipsis; white-space:nowrap; word-break:break-all; }
-    &__btn {display:block; width:80px; margin:5px auto; padding:5px; border:0; border-radius:3px; font-size:12px; background:$oc-gray-1; color:$oc-gray-7; text-align:center; text-decoration:none; cursor:pointer; 
+    &__btn {display:block; width:80px; margin:5px auto; padding:5px;  border-radius:3px; font-size:12px; background:$oc-gray-1; color:$oc-gray-7; text-align:center; text-decoration:none; cursor:pointer;
         &:hover {text-decoration:none; background:$oc-white; color:$oc-blue-7}
     }
     &__tbl { margin:0 10px;
@@ -162,7 +158,7 @@ $thumbsize:115px;
     &__hovertbl {display:table; position:absolute; top:0; left:0; bottom:0; right:0; width:100%;height:100%; background:url(../img/bg_block_50.png); vertical-align:middle;    }
     &__hovertd {display:table-cell; vertical-align:middle;}
 }
-.thumb__txt + .thumb__txt {margin-top:0}
+
 
 .zoomin{
     &__comm{position:absolute; border:1px solid #ddd}
@@ -212,9 +208,8 @@ $thumbsize:115px;
 .layer{
     &__wrap{display:none}
     &__bg{position:fixed; top:0; right:0; bottom:0; left:0; background:url(../img/bg_block_50.png); z-index:100;}
-    &__box{position:fixed; top:50%; left:50%; width:400px; height:400px; margin-top:-200px; margin-left:-200px; background:$oc-gray-0; text-align:center; z-index:110}
-    &__imgbox{position:relative; width:300px; height:300px; margin:40px auto 0; background:url(../img/bg_check.png)}
-    &__img {position:absolute; top:0px; right:0px; bottom:0px; left:0px; max-width:100%; max-height:100%; width:auto; height:auto; margin: auto;}
+    &__box{position:absolute; top:50%; left:50%; width:400px; height:400px; margin-top:-200px; margin-left:-200px; background:$oc-gray-0; text-align:center; z-index:110}
+    &__img{display:block; width:300px; height:300px; margin:50px auto 0;}
     &__btn{display:inline-block; margin:10px auto; padding:5px 20px; border:1px solid $oc-blue-6; border-radius:3px; font-weight:600; background:$oc-blue-6; color:$oc-gray-0;
         &:hover{background:$oc-blue-5; text-decoration:none; }
     }

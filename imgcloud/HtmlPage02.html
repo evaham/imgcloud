@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <title>투게더 이미지 클라우드</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="topbar__comm">
+            <img class="topbar__logo" src="img/img_bi.png" />
+            <ul class="topbar__menulist">
+                <li><a href="HtmlPage01.html">상품장 이미지</a></li>
+                <li class="active"><a href="HtmlPage02.html">이미지허브</a></li>
+                <li><a href="HtmlPage04.html">매장관리용</a></li>
+            </ul>
+        </div>
+        <div class="cont__wrap">
+            <div class="help__comm js_event2">
+                <ul class="help__list">
+                    <li>이미지허브의 <span>저장기간은 최대 7일</span>이며 이후 자동 삭제됩니다.</li>
+                    <li>이미지를 공유처리 하시면 영구적으로 사용이 가능합니다.('상품장이미지' 메뉴에서 확인/사용 가능)</li>
+                    <li>상품이미지 공유 시, 타 매장에 공개되며 사용도 가능합니다.</li>
+                    <li>상품이미지가 아니거나 상품명/바코드 정보가 올바르지 않은 공유이미지는 고지 없이 삭제될 수 있습니다.</li>
+                </ul>
+                <a class="help__close" onclick="javascript: clickEvent3();">오늘 안보기</a>
+            </div>
+            <div class="search__comm">
+                <div class="search__radio">
+                    <input id="radio1" type="radio" name="group1" checked="checked" />
+                    <label for="radio1">전체</label>
+                </div>
+                <div class="search__radio">
+                    <input id="radio2" type="radio" name="group1" />
+                    <label for="radio2">POP</label>
+                </div>
+                <div class="search__radio">
+                    <input id="radio3" type="radio" name="group1" />
+                    <label for="radio3">MPOS 업로드</label>
+                </div>
+            </div>
+
+            <div class="thumb__comm">
+
+                <div class="nodata__comm">
+                    <i class="nodata__icon"></i>
+                    <p class="nodata__tit">검색된 이미지가 없습니다.</p>
+                </div>
+
+
+                <ul class="thumb__list">
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/08/9693/1533706177691.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+                        <div class="thumb__hovertbl">
+                            <div class="thumb__hovertd">
+                                <button class="thumb__btn">선택</button>
+                                <a class="thumb__btn" onclick="javascript: clickEvent1();">크게보기</a>
+                                <a class="thumb__btn" onclick="javascript: popupOpen1();">이미지공유</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/08/9691/1533706142205.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+                        <div class="thumb__hovertbl">
+                            <div class="thumb__hovertd">
+                                <button class="thumb__btn">선택</button>
+                                <a class="thumb__btn" onclick="javascript: clickEvent1();">크게보기</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/08/9690/1533706074623.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/08/9691/1533706142205.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/08/9691/1533706142205.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/06/9551/1533534725672.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/08/9691/1533706142205.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/08/9691/1533706142205.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+
+                    </li>
+                    <li>
+                        <img src="http://file-s.togethers.kr/shareImage//2018/08/06/9551/1533534725672.jpg" class="thumb__img" />
+                        <p class="thumb__txt">공유기간 : 6일</p>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <div class="layer__wrap js_event">
+        <div class="layer__bg"></div>
+        <div class="layer__box">
+            <img class="layer__img" src="http://file-s.togethers.kr/shareImage//2018/08/08/9693/1533706177691.jpg" />
+            <a href="#" class="layer__close" onclick="javascript: clickEvent2();">닫기</a>
+            <a href="#" class="layer__btn">선택</a>
+        </div>
+    </div>
+    <script>
+        function clickEvent1() {
+            $(".js_event").css("display", "block");
+        };
+        function clickEvent2() {
+            $(".js_event").css("display", "none");
+        };
+        function clickEvent3() {
+            $(".js_event2").css("display", "none");
+        };
+        function popupOpen1() {
+            var popUrl = "popup1.html";
+            var popOption = "width=330, height=200, resizable=no, scrollbars=no, status=no;";
+            window.open(popUrl, "", popOption);
+        };
+    </script>
+</body>
+</html>

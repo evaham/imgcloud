@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
+    <link href="css/common.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <title>투게더 이미지 클라우드</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="topbar__comm">
+            <img class="topbar__logo" src="img/img_bi.png" />
+            <ul class="topbar__menulist">
+                <li><a href="HtmlPage01.html">상품장 이미지</a></li>
+                <li><a href="HtmlPage02.html">이미지허브</a></li>
+                <li><a href="HtmlPage03.html">이미지허브</a></li>
+                <li class="active"><a href="HtmlPage04.html">매장관리용</a></li>
+            </ul>
+        </div>
+        <div class="cont__wrap">
+            <div class="help__comm js_event2">
+                <ul class="help__list">
+                    <li>자주 사용하는 매장 로고/전경/약도 사진을 등록하실 수 있습니다.</li>
+                </ul>
+                <a href="#" class="help__close" onclick="javascript:clickEvent3()">오늘 안보기</a>
+            </div>
+            <div class="thumb__comm">
+                <p class="thumb__tit">마트로고(CI) <span>(jpg,png / 최대 3M / 최대 4장)</span></p>
+                <ul class="thumb__list">
+                    <li>
+                        <div class="thumb__martimgbox">
+                            <img src="img/sample_logo1.png" class="thumb__martimg" />
+                        </div>
+                        <div class="thumb__hovertbl">
+                            <div class="thumb__hovertd">
+                                <button class="thumb__btn">선택</button>
+                                <a class="thumb__btn" onclick="javascript:clickEvent1()">크게보기</a>
+                                <button class="thumb__btn">삭제</button>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb__martimgbox">
+                            <img src="img/sample_logo2.png" class="thumb__martimg" />
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="thumb__martimgbox">
+                                <img src="img/bg_btn.png" class="thumb__martimg" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="thumb__martimgbox">
+                                <img src="img/bg_btn.png" class="thumb__martimg" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <p class="thumb__tit">매장정보(내/외부사진,약도) <span>(jpg,png / 최대 3M / 최대 8장)</span></p>
+                <ul class="thumb__list">
+                    <li>
+                        <div class="thumb__martimgbox">
+                            <img src="img/sample_mart3.png" class="thumb__martimg" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb__martimgbox">
+                            <img src="img/sample_mart2.png" class="thumb__martimg" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb__martimgbox">
+                            <img src="img/sample_mart3.png" class="thumb__martimg" />
+                        </div>
+                    </li>
+                    <li>
+                        <div class="thumb__martimgbox">
+                            <img src="img/sample_mart4.png" class="thumb__martimg" />
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="thumb__martimgbox">
+                                <img src="img/bg_btn.png" class="thumb__martimg" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="thumb__martimgbox">
+                                <img src="img/bg_btn.png" class="thumb__martimg" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="thumb__martimgbox">
+                                <img src="img/bg_btn.png" class="thumb__martimg" />
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="thumb__martimgbox">
+                                <img src="img/bg_btn.png" class="thumb__martimg" />
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="layer__wrap js_event">
+        <div class="layer__bg"></div>
+        <div class="layer__box">
+            <div class="layer__imgbox">
+                <img class="layer__img" src="http://file-s.togethers.kr/shareImage//2018/08/08/9693/1533706177691.jpg" />
+            </div>
+            <a href="#" class="layer__close" onclick="javascript:clickEvent2()">닫기</a>
+            <a href="#" class="layer__btn">선택</a>
+        </div>
+    </div>
+    <script>
+        function clickEvent1() {
+            $(".js_event").css("display", "block");
+        };
+        function clickEvent2() {
+            $(".js_event").css("display", "none");
+        };
+        function clickEvent3() {
+            $(".js_event2").css("display", "none");
+        };
+
+    </script>
+</body>
+</html>
